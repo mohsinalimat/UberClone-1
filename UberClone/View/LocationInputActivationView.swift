@@ -2,8 +2,8 @@
 //  LocationInputActivationView.swift
 //  UberClone
 //
-//  Created by Puspank Kumar on 02/03/20.
-//  Copyright © 2020 Puspank Kumar. All rights reserved.
+//  Created by Pushpank Kumar on 02/03/20.
+//  Copyright © 2020 Pushpank Kumar. All rights reserved.
 //
 
 import UIKit

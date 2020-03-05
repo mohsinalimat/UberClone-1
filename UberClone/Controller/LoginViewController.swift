@@ -2,8 +2,8 @@
 //  LoginViewController.swift
 //  UberClone
 //
-//  Created by Puspank Kumar on 10/02/20.
-//  Copyright © 2020 Puspank Kumar. All rights reserved.
+//  Created by Pushpank Kumar on 10/02/20.
+//  Copyright © 2020 Pushpank Kumar. All rights reserved.
 //
 
 import UIKit

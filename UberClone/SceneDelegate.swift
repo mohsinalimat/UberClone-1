@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  UberClone
 //
-//  Created by Puspank Kumar on 10/02/20.
-//  Copyright © 2020 Puspank Kumar. All rights reserved.
+//  Created by Pushpank Kumar on 10/02/20.
+//  Copyright © 2020 Pushpank Kumar. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ extension SceneDelegate {
     /// - Parameter windowScene: windowScene Object
     private func setUpRootViewController(windowScene: UIWindowScene) {
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        window?.rootViewController = HomeViewController()
         window?.makeKeyAndVisible()
     }
 }

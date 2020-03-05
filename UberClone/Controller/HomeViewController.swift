@@ -2,8 +2,8 @@
 //  HomeViewController.swift
 //  UberClone
 //
-//  Created by Puspank Kumar on 02/03/20.
-//  Copyright © 2020 Puspank Kumar. All rights reserved.
+//  Created by Pushpank Kumar on 02/03/20.
+//  Copyright © 2020 Pushpank Kumar. All rights reserved.
 //
 
 import UIKit
@@ -28,12 +28,13 @@ class HomeViewController: UIViewController {
 
 // MARK: View Life Cycle
 extension HomeViewController {
-        override func viewDidLoad() {
-            super.viewDidLoad()
-           checkIfUserIsLoggedIn()
-            enableLocationService()
-         //   signOut()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkIfUserIsLoggedIn()
+        enableLocationService()
+        fetchUserData()
+        //   signOut()
+    }
 }
 
 extension HomeViewController {
@@ -116,6 +117,10 @@ extension HomeViewController {
 // MARK:- Service Handler
 extension HomeViewController {
     
+    func fetchUserData() {
+        Service.shared.fetchUserData()
+    }
+    
     /// Checking user ir logged in or not
     func checkIfUserIsLoggedIn() {
         
@@ -176,17 +181,27 @@ extension HomeViewController: CLLocationManagerDelegate {
 
 
 extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Test"
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return section == 0 ? 2 : 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         return cell
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
+    
     
 }
